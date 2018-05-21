@@ -1,7 +1,6 @@
 ---
-- name: Hello World!
-  hosts: all
- 
-  tasks:
-  - name: Hello World!
-    shell: echo "Hi! Tower is working."
+- name: Download the terraform package archive and unzip it to /usr/local/bin
+  unarchive:
+    src: https://releases.hashicorp.com/terraform/0.11.7/terraform_0.11.7_linux_amd64.zip
+    dest: /usr/local/bin
+    remote_src: yes
