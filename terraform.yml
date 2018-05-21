@@ -9,8 +9,10 @@
       url: https://releases.hashicorp.com/terraform/0.11.7/terraform_0.11.7_linux_amd64.zip
       dest: /home/ec2-user/terraform.zip
       mode: 0444
+      owner: ec2-user
 
   - name: Unarchive terraform package and install in bin directory
     unarchive:
       src: /home/ec2-user/terraform.zip
       dest: /usr/local/bin
+      owner: ec2-user
