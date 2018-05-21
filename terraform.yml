@@ -10,9 +10,11 @@
       dest: /home/ec2-user/terraform.zip
       mode: 0777
       owner: ec2-user
+      become: yes
 
   - name: Unarchive terraform package and install in bin directory
     unarchive:
       src: /home/ec2-user/terraform.zip
       dest: /usr/local/bin
       owner: ec2-user
+      become: yes
