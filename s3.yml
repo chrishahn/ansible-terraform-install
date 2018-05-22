@@ -7,6 +7,6 @@
   - terraform:
     project_path: /home/ec2-user/s3/
     state: present
-    - variables:
+    variables:
       aws_access_key: {{ aws_access_key }}
       aws_secret_key: {{ aws_secret_key}}
