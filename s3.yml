@@ -2,10 +2,14 @@
 - name: Manage a test S3 bucket
   hosts: all
   become: yes
- 
+
   tasks:
   - debug:
-    msg: "key {{ aws_access_key }} and secret {{ aws_secret_key }}"
+    msg: "testing with no tokens"
+ 
+  # tasks:
+  # - debug:
+  #   msg: "key {{ aws_access_key }} and secret {{ aws_secret_key }}"
 
   # - name: Apply the S3 terraform template
   #   terraform:
