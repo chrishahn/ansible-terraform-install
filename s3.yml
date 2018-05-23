@@ -5,11 +5,11 @@
 
   tasks:
   - debug:
-    msg: "testing with no tokens"
+      msg: "testing with no tokens"
  
-  # tasks:
-  # - debug:
-  #   msg: "key {{ aws_access_key }} and secret {{ aws_secret_key }}"
+  tasks:
+  - debug:
+      msg: "key {{ aws_access_key }} and secret {{ aws_secret_key }}"
 
   # - name: Apply the S3 terraform template
   #   terraform:
