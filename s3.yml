@@ -8,7 +8,13 @@
     terraform:
       project_path: /home/ec2-user/s3/
       state: planned
-      
+      plan_file: /home/ec2-user/s3/terraform.tfstate
+    register: plan_output
+
+  - name: Output terraform apply command and plan
+    debug:
+      msg: {{ plan_output }}
+
   - name: Pause for plan approval
     pause:
       prompt: "Types 'yes' to continue executing this plan"
