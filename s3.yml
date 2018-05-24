@@ -7,7 +7,14 @@
   - name: Apply the S3 terraform template
     terraform:
       project_path: /home/ec2-user/s3/
-      state: absent
-      variables:
-        aws_access_key: "{{ aws_access_key }}"
-        aws_secret_key: "{{ aws_secret_key }}"
+      state: planned
+      
+  - name: Pause for plan approval
+    pause:
+      prompt: "Types 'yes' to continue executing this plan"
+    register: prompt_response
+
+  - name: Output the prompted response
+    debug:
+      msg: "They entered yes!"
+    when: prompt_response.user_input == "yes"
