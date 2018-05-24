@@ -13,7 +13,7 @@
 
   - name: Output terraform apply command and plan
     debug:
-      msg: {{ plan_output }}
+      msg: "{{ plan_output }}""
 
   - name: Pause for plan approval
     pause:
