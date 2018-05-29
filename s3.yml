@@ -7,7 +7,7 @@
   - name: Apply the S3 terraform template
     terraform:
       project_path: /home/ec2-user/s3/
-      state: planned
+      state: present
       plan_file: /home/ec2-user/s3/terraform.tfstate
     register: plan_output
 
